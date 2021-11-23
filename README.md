@@ -1,10 +1,10 @@
-# Dapr Application on AWS EKS
+# Dapr (Golang) Application on AWS EKS
 
 This project contains a Dapr application with a Redis datastore. The application is deployed on Amazon Elastic Kubernetes Service ([Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html)). The [AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/home.html) is used to create the AWS EKS.
 
 ## Prerequisites
 
-You will need the following prerequisites installed in order to build and deploy the this project.
+You will need the following prerequisites installed in order to build and deploy this project.
 
 ### Node.js
 
@@ -130,7 +130,7 @@ kubectl get pods -n dapr-system
 
 ## Dapr app
 
-The [application](./dapr-app/main.go) that we're goin to deploy is a simple web server listening on port 8080.  An HTTP GET request at `/api/v1/message` will return the string “Greetings called `number` times!”  The `number` is incremented every time a request is made.  The number of requests is stored in Redis.  The application uses the [Dapr Go SDK](https://github.com/dapr/go-sdk) to communicate with Redis via the Dapr client.
+The [application](./dapr-app/main.go) that we're going to deploy is a simple web server listening on port 8080.  An HTTP GET request at `/api/v1/message` will return the string “Greetings called `number` times!”  The `number` is incremented every time a request is made.  The number of requests is stored in Redis.  The application uses the [Dapr Go SDK](https://github.com/dapr/go-sdk) to communicate with Redis via the Dapr client.
 
 ### Step 1 - Configuring Redis as the Persistence Layer
 
