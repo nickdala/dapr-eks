@@ -44,7 +44,7 @@ cdk --version
 
 ### Dapr
 
-The Dapr CLI allows you to setup Dapr on the Kubernetes cluster we will create.  Follow the instructions [here](https://docs.dapr.io/getting-started/install-dapr)
+The Dapr CLI allows you to setup Dapr on the Kubernetes cluster.  Follow the instructions [here](https://docs.dapr.io/getting-started/install-dapr).
 
 For MacOS, run the following command
 
@@ -160,7 +160,7 @@ kubectl apply -f hellodapr.yaml
 
 ## The Fun Stuff
 
-Now that we have our EKS cluster up and running and the Dapr application deployed, lets test it out. We will use [port forwarding](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/) to connect to the `hellodapr` pod running in the AWS EKS cluster. After we forward our local port to the port on the Kubernetes POD, we will use Postman to issue HTTP GET requests.
+Now that we have our EKS cluster up and running and the Dapr application deployed, lets test it out. We will use [port forwarding](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/) to connect to the `hellodapr` pod running in the AWS EKS cluster. Port forwarding allows us to interact with internal Kubernetes cluster processes from our local port. This sets us up to use Postman to issue HTTP GET requests.
 
 ### Step 1 - Port Forwarding
 
