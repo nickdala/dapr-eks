@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hellodapr
+  labels:
+    app: hellodapr
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hellodapr
+  template:
+    metadata:
+      labels:
+        app: hellodapr
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "hellodapr"
+        dapr.io/app-port: "8080"
+        dapr.io/log-level: "debug"
+    spec:
+      containers:
+      - name: hellodapr
+        image: nickdala/hellodapr-go:2.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
