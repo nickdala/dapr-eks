@@ -1,6 +1,6 @@
 # Dapr (Golang) Application on AWS EKS
 
-This project contains a Dapr application with a Redis datastore. The application is deployed on Amazon Elastic Kubernetes Service ([Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html)). The [AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/home.html) is used to create the AWS EKS.
+Dapr application with a Redis datastore deployed on Amazon Elastic Kubernetes Service ([Amazon EKS](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html)). The [AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/home.html) is used to create the AWS EKS.
 
 ## Prerequisites
 
